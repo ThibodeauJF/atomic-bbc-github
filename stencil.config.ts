@@ -34,8 +34,8 @@ export const config: Config = {
   },
   plugins: [
     replace({
-      "process.env.PLATFORM_URL": process.env.PLATFORM_URL,
-      "process.env.ORGANIZATION_ID": process.env.ORGANIZATION_ID,
+      "process.env.PLATFORM_URL": `"${process.env.PLATFORM_URL}"`,
+      "process.env.ORGANIZATION_ID": `"${process.env.ORGANIZATION_ID}"`,
     }),
     dotenvPlugin(),
   ],
