@@ -9,7 +9,7 @@ async function main() {
   const searchInterface: HTMLAtomicSearchInterfaceElement =
     document.querySelector("atomic-search-interface")!;
 
-  console.log("Removing dotenv");
+  console.log("adding custom replace");
   const platformUrl = process.env.PLATFORM_URL!;
   const organizationId = process.env.ORGANIZATION_ID!;
   await searchInterface.initialize({
