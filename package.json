@@ -1,0 +1,33 @@
+{
+  "name": "atomic-bbc-github",
+  "description": "Atomic-Bbc-Github project",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/index.js",
+  "scripts": {
+    "start": "node start-netlify.mjs",
+    "build": "stencil build",
+    "dev:live": "npm run site:link && node start-netlify.mjs --live",
+    "site:init": "netlify init",
+    "site:link": "netlify link",
+    "site:deploy": "npm run site:link && npm run build && netlify env:import .env && netlify deploy --prod --open"
+  },
+  "dependencies": {
+    "@coveo/atomic": "1.86.0",
+    "@coveo/search-token-lambda": "1.33.0",
+    "@stencil/core": "2.17.1"
+  },
+  "devDependencies": {
+    "fkill": "8.0.1",
+    "get-port": "6.1.2",
+    "gts": "3.1.0",
+    "netlify-cli": "10.11.2",
+    "prettier": "2.7.1",
+    "rollup-plugin-dotenv": "0.3.0",
+    "rollup-plugin-html": "0.2.1"
+  }
+}
